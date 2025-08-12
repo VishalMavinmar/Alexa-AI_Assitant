@@ -7,10 +7,11 @@ import requests
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 
-# Set female voice
+
+
 voices = engine.getProperty('voices')
 for voice in voices:
-    if "female" in voice.name.lower() or "zira" in voice.name.lower():  # 'Zira' is often the default female voice on Windows
+    if "female" in voice.name.lower() or "zira" in voice.name.lower():  
         engine.setProperty('voice', voice.id)
         break
 
@@ -78,3 +79,4 @@ if __name__ == "__main__":
             print("error; {0}".format(e))
 
       
+
