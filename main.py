@@ -48,16 +48,16 @@ def processcommand(c):
         else:
             speak("Please tell me the song name.")
 
-    # Send WhatsApp Messages
+    
     elif "send message" in c:
         speak("Whom should I send?")
-        contact = input("Enter number with country code: ")  # example: +919876543210
+        contact = input("Enter number with country code: ")  
         speak("What is the message?")
         msg = input("Type your message: ")
         pywhatkit.sendwhatmsg_instantly(contact, msg)
         speak("Message sent successfully!")
 
-    #Open Any Website
+   
     elif "open website" in c:
         site = c.replace("open website", "").replace("of", "").strip()
         speak(f"Opening {site}")
@@ -149,3 +149,4 @@ if __name__ == "__main__":
             continue  
         except Exception as e:
             print("Error:", e)
+
