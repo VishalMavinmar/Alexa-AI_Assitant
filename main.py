@@ -86,10 +86,7 @@ def processcommand(c):
         joke = pyjokes.get_joke()
         speak(joke)
     
-    # elif "open google" in c:
-    #     speak("Opening Google")
-    #     webbrowser.open("https://www.google.com")
-
+   
     elif "open notepad" in c:
         speak("Opening Notepad")
         os.system("notepad.exe")
@@ -149,4 +146,5 @@ if __name__ == "__main__":
             continue  
         except Exception as e:
             print("Error:", e)
+
 
